@@ -1,3 +1,5 @@
+const SOCKET = io.connect("ws://localhost:3000/");;
+
 const btnClickHandler = event => {
     if (event.target.id === "host-btn")
         console.log("Host")
