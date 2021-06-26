@@ -5,12 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>CodeHouse</title>
     <script src="./js/main.js" defer></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.2/tailwind.min.css"
-      integrity="sha512-ghzNCvgK81aIdKyuTnLazeFEzs2F8AHLWyCYsvJHPqgGf8OpS/yRrq6seFxik5n08mjRmX8ETGPrHKkDkwBekw=="
-      crossorigin="anonymous"
-    />
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.2/socket.io.js"
       integrity="sha512-iZIBSs+gDyTH0ZhUem9eQ1t4DcEn2B9lHxfRMeGQhyNdSUz+rb+5A3ummX6DQTOIs1XK0gOteOg/LPtSo9VJ+w=="
@@ -19,84 +13,16 @@
     <style></style>
   </head>
   <body>
-    <section class="text-gray-400 bg-gray-900 body-font h-screen">
-      <div
-        class="
-          container
-          mx-auto
-          flex
-          px-5
-          py-24
-          items-center
-          justify-center
-          flex-col
-        "
-      >
-        <img
-          class="
-            lg:w-3/6
-            md:w-3/6
-            w-5/6
-            mb-10
-            object-cover object-center
-            rounded
-          "
-          alt="hero-code"
-          src="./img/hero-code.svg"
-        />
-        <div class="text-center lg:w-2/3 w-full">
-          <h1
-            class="title-font sm:text-4xl text-3xl mb-4 font-medium text-white"
-          >
-            CodeHouse
-          </h1>
-          <p class="leading-relaxed mb-8">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            <br />
-            Consectetur amet error omnis culpa?
-            <br />
-            Maiores facilis nesciunt rem eaque quam.
-          </p>
-          <div class="flex justify-center">
-            <button
-              id="host-btn"
-              class="
-                inline-flex
-                text-white
-                bg-indigo-500
-                border-0
-                py-2
-                px-6
-                focus:outline-none
-                hover:bg-indigo-600
-                rounded
-                text-lg
-              "
-            >
-              Host
-            </button>
-            <button
-              id="join-btn"
-              class="
-                ml-4
-                inline-flex
-                text-gray-400
-                bg-gray-800
-                border-0
-                py-2
-                px-6
-                focus:outline-none
-                hover:bg-gray-700
-                hover:text-white
-                rounded
-                text-lg
-              "
-            >
-              Join
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
+    <h1>CodeHouse</h1>
+    <div id="init">
+      <input type="text" id="host-name" placeholder="HostName" /><br />
+      <button id="host-btn">Host</button> <br /><br />
+      <input type="text" id="room-key" placeholder="RoomKey" /><br />
+      <button id="join-btn">Join</button>
+    </div>
+    <br />
+    <br />
+    <div id="room-key-msg"></div>
+    <textarea id="code" rows="5" cols="50"> </textarea>
   </body>
 </html>
