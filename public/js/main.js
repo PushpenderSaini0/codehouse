@@ -6,8 +6,8 @@ const btnClickHandler = event => {
         SOCKET.emit('HOST-ROOM', { hostName }, (roomKey) => {
             ROOMKEY = roomKey;
             document.getElementById("init").innerHTML = "";
-            document.getElementById("room-key-msg").innerHTML = "Your Hosted roomkey is : " + roomKey;
-            document.getElementById("code").addEventListener("change", sendCode);
+            document.getElementById("room-key-msg").innerHTML = "Your roomkey is : " + roomKey;
+            document.getElementById("code").addEventListener("keyup", sendCode);
         });
     }
     if (event.target.id === "join-btn") {
@@ -28,8 +28,6 @@ const sendCode = () => {
 const codeUpdater = code => {
     document.getElementById("code").value = code;
 }
-
-
 
 
 //set click listeners

@@ -1,0 +1,17 @@
+html,
+body {
+  margin: 8px;
+  padding: 8px;
+}
+
+h1,
+h3,
+#init,
+#core-inner {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+  padding: 10px;
+}

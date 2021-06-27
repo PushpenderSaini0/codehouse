@@ -10,7 +10,7 @@
       integrity="sha512-iZIBSs+gDyTH0ZhUem9eQ1t4DcEn2B9lHxfRMeGQhyNdSUz+rb+5A3ummX6DQTOIs1XK0gOteOg/LPtSo9VJ+w=="
       crossorigin="anonymous"
     ></script>
-    <style></style>
+    <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
     <h1>CodeHouse</h1>
@@ -20,9 +20,11 @@
       <input type="text" id="room-key" placeholder="RoomKey" /><br />
       <button id="join-btn">Join</button>
     </div>
-    <br />
-    <br />
-    <div id="room-key-msg"></div>
-    <textarea id="code" rows="5" cols="50"> </textarea>
+    <div id="core">
+      <h3 id="room-key-msg"></h3>
+      <div id="core-inner">
+        <textarea id="code" rows="5" cols="30"> </textarea>
+      </div>
+    </div>
   </body>
 </html>
