@@ -10,7 +10,6 @@ const memberHandler = socket => {
         });
     }
     else {
-        //IO.in("room1").disconnectSockets(true);
         IO.getIO().in(socket.id).disconnectSockets(true);
     }
 }
