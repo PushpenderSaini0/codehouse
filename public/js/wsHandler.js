@@ -1,4 +1,6 @@
 import { getEditorValue, setEditorValue ,didEditorValueChange} from './editor.js';
+import { displayRoomKey } from './domHelper.js';
+
 let SOCKET = null;
 let ROOMKEY = null;
 const sendCode = () => {
@@ -14,8 +16,8 @@ export const hostRoom = () => {
     const hostName = document.getElementById("host-name").value;
     SOCKET.emit('HOST-ROOM', { hostName }, (roomKey) => {
         ROOMKEY = roomKey;
-        document.getElementById("init").innerHTML = "";
-        document.getElementById("room-key-msg").innerHTML = "Your roomkey is : " + roomKey;
+        document.querySelector("section").remove();
+        displayRoomKey(roomKey);
         didEditorValueChange(sendCode);
     });
 }
@@ -24,7 +26,8 @@ export const joinRoom = () => {
     SOCKET = io.connect("ws://localhost:3000/");
     ROOMKEY = document.getElementById("room-key").value;
     SOCKET.emit("JOIN-ROOM", ROOMKEY, () => {
-        document.getElementById("init").innerHTML = "";
+        document.querySelector("section").remove();
+        displayRoomKey(ROOMKEY);
         document.getElementById("code").disabled = true;
         SOCKET.on("CODE-SERVE", codeUpdater);
     });

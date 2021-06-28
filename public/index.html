@@ -46,19 +46,24 @@
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
-    <h1>CodeHouse</h1>
-    <div id="init">
-      <input type="text" id="host-name" placeholder="HostName" /><br />
-      <button id="host-btn">Host</button> <br /><br />
-      <input type="text" id="room-key" placeholder="RoomKey" /><br />
-      <button id="join-btn">Join</button>
-    </div>
-    <div id="core">
-      <h3 id="room-key-msg"></h3>
-      <div id="core-inner">
-        <!-- <textarea id="code" name="code"></textarea> -->
-        <div id="code" name="code"></div>
+    <nav>
+      <li><p>CodeHouse :</p></li>
+      <li><p id="host-name-display">No Host</p></li>
+      <li><p id="room-key-display">No Key</p></li>
+    </nav>
+    <section>
+      <h1>CodeHouse</h1>
+      <div id="init">
+        <input type="text" id="host-name" placeholder="HostName" /><br />
+        <button id="host-btn">Host</button> <br /><br />
+        <input type="text" id="room-key" placeholder="RoomKey" /><br />
+        <button id="join-btn">Join</button>
       </div>
-    </div>
+    </section>
+    <section>
+      <div id="core">
+        <div id="code"></div>
+      </div>
+    </section>
   </body>
 </html>

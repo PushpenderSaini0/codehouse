@@ -8,7 +8,9 @@ export const initEditor = (mode) => {
 			lineNumbers: 'on',
 			vertical: 'auto',
 			horizintal: 'auto',
+			automaticLayout: true,
 		});
+		editor.hei
 	}
 	if (mode == 'MEMBER') {
 		editor = monaco.editor.create(document.getElementById("code"), {
@@ -20,6 +22,7 @@ export const initEditor = (mode) => {
 			readOnly: true,
 			vertical: 'auto',
 			horizintal: 'auto',
+			automaticLayout: true,
 		});
 	}
 }
