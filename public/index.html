@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>CodeHouse</title>
-    <script src="./js/main.js" defer></script>
+    <script type="module" src="./js/main.js" defer></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.2/socket.io.js"
       integrity="sha512-iZIBSs+gDyTH0ZhUem9eQ1t4DcEn2B9lHxfRMeGQhyNdSUz+rb+5A3ummX6DQTOIs1XK0gOteOg/LPtSo9VJ+w=="
@@ -23,7 +23,8 @@
     <div id="core">
       <h3 id="room-key-msg"></h3>
       <div id="core-inner">
-        <textarea id="code" rows="5" cols="30"> </textarea>
+        <!-- <textarea id="code" name="code"></textarea> -->
+        <div id="code" name="code"></div>
       </div>
     </div>
   </body>
