@@ -1,12 +1,12 @@
+import { getEditorValue, setEditorValue ,didEditorValueChange} from './editor.js';
 let SOCKET = null;
 let ROOMKEY = null;
-
 const sendCode = () => {
-    SOCKET.emit('PUSH-CODE', { ROOMKEY, code: document.getElementById("code").value });
+    SOCKET.emit('PUSH-CODE', { ROOMKEY, code: getEditorValue() });
 }
 
 const codeUpdater = code => {
-    document.getElementById("code").value = code;
+    setEditorValue(code);
 }
 
 export const hostRoom = () => {
@@ -16,7 +16,7 @@ export const hostRoom = () => {
         ROOMKEY = roomKey;
         document.getElementById("init").innerHTML = "";
         document.getElementById("room-key-msg").innerHTML = "Your roomkey is : " + roomKey;
-        document.getElementById("code").addEventListener("keyup", sendCode);
+        didEditorValueChange(sendCode);
     });
 }
 
