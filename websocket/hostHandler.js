@@ -4,7 +4,7 @@ const MAX_USER = require('../codehouse.json').MAX_USER;
 
 const hostHandler = socket => {
     if (userHandler.getNumber() <= MAX_USER) {
-        socket.on('HOST-ROOM', (data, callback) => {
+        socket.on('HOST-ROOM', (callback) => {
             const roomKey = Date.now().toString(16);;
             socket.join(roomKey);
             callback(roomKey);

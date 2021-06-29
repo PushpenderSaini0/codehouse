@@ -1,4 +1,4 @@
-import { getEditorValue, setEditorValue ,didEditorValueChange} from './editor.js';
+import { getEditorValue, setEditorValue, didEditorValueChange } from './editor.js';
 import { displayRoomKey } from './domHelper.js';
 
 let SOCKET = null;
@@ -13,8 +13,7 @@ const codeUpdater = code => {
 
 export const hostRoom = () => {
     SOCKET = io.connect("ws://localhost:3000/host");
-    const hostName = document.getElementById("host-name").value;
-    SOCKET.emit('HOST-ROOM', { hostName }, (roomKey) => {
+    SOCKET.emit('HOST-ROOM', (roomKey) => {
         ROOMKEY = roomKey;
         document.querySelector("section").remove();
         displayRoomKey(roomKey);
